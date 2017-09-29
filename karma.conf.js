@@ -9,6 +9,7 @@ module.exports = (config) => {
     frameworks: ['mocha', 'sinon', 'chai'],
 
     files: [
+      'test/_helpers/enzymeSetup.js',
       'test/_helpers/restoreSinonStubs.js',
       'test/utils/*',
       'test/components/*',
@@ -35,6 +36,7 @@ module.exports = (config) => {
               path.join(__dirname, 'src'),
               path.join(__dirname, 'test'),
               require.resolve('airbnb-js-shims'),
+              require.resolve('enzyme-adapter-react-15'),
             ],
             query: {
               presets: ['airbnb'],
