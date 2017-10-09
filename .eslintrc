@@ -1,5 +1,8 @@
 {
   "extends": "airbnb",
+  "plugins": [
+    "react-with-styles"
+  ],
 
   "env": {
     "browser": true,
@@ -8,8 +11,13 @@
 
   "rules": {
     "no-mixed-operators": [2, { "allowSamePrecedence": true }],
+
     "jsx-a11y/no-static-element-interactions": 1, // TODO: enable
+
     "react/no-did-mount-set-state": 0, // necessary for server-rendering
+
+    "react-with-styles/no-unused-styles": 2,
+    "react-with-styles/only-spread-css": 2
   },
 
   "settings": {
